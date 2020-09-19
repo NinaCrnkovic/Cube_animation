@@ -1,0 +1,77 @@
+body{
+    background: rgb(44, 43, 43);
+}
+
+.wrapper{
+    width: 450px;
+    height: 450px;
+    margin: 15% auto;
+
+}
+.box-area{
+    animation: animate 10s ease-in-out infinite;
+    transform-style: preserve-3d;
+    transform-origin: 120px 120px 0;
+}
+.box-area div{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    line-height: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.box-area .box1{
+    background: rgba(220, 20, 60, 0.5);
+    transform: translateZ(220px)
+}
+
+.box-area .box2{
+    background: rgba(65, 16, 240, 0.5);
+    transform: rotateY(90deg) translateZ(220px);
+}
+
+.box-area .box3{
+    background: rgba(228, 110, 13, 0.5);
+    transform: rotateY(90deg) rotateX(90deg) translateZ(220px);
+}
+
+.box-area .box4{
+    background: rgba(128, 15, 221, 0.5);
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(220px);
+}
+
+.box-area .box5{
+    background: rgba(133, 228, 9, 0.5);
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(220px);
+}
+
+.box-area .box6{
+    background: rgba(14, 230, 219, 0.5);
+    transform: rotateX(-90deg) translateZ(220px);
+}
+
+
+@keyframes animate{
+    from, to{
+        transform: rotateX(0deg) rotateY(60deg) rotateZ(20deg);
+
+    }
+    16%{
+        transform: rotateY(-90deg) rotateY(130deg);
+    }
+    33%{
+        transform: rotateY(-90deg) rotateZ(130deg);
+    }
+    50%{
+        transform: rotateY(-180deg) rotateZ(150deg) rotateX(30deg);
+    }
+    66%{
+        transform: rotateY(-280deg) rotateX(130deg);
+    }
+    83%{
+        transform: rotateX(130deg) rotateY(130deg);
+    }
+}
